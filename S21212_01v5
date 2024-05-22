@@ -1,0 +1,10 @@
+package s21212_00;
+
+public class S21212_01v5 {
+	public static void main(String[] args) throws Exception {
+		int keycode = System.in.read();
+		System.out.println("keycode:" + keycode);
+
+	}
+
+}
