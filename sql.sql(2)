@@ -1,0 +1,15 @@
+select * from tab;
+
+select * from pc_emp;
+
+select * from pc_menu;
+
+insert into PC_MENU values( 10, '음료', '체리콕', 3000);
+
+select max(menu_no) from PC_MENU;
+
+select * from pc_emp;
+
+insert int PC_EMP values( 5, '민지성', 'slave', '2007-07-11', 1045678978, '경기도 성남시', 100);
+
+insert into PC_EMP values(?,?,?,?,?,?,?.?);
