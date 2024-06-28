@@ -1,0 +1,32 @@
+package s21212_java00;
+
+import java.io.IOException;
+
+public class S21212_01v51 {
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		int keyCode;
+		
+		System.out.println("keyCode 입력:");
+		 
+		keyCode = System.in.read();
+		System.out.println("ketCode: " + keyCode);
+		
+		keyCode = System.in.read();
+		System.out.println("ketCode: " + keyCode);
+		
+		keyCode = System.in.read();
+		System.out.println("ketCode: " + keyCode);
+
+		int keycode;
+
+		while (true) {
+			keycode = System.in.read();
+			System.out.println("keycode: " + keycode);
+			if (keycode == 113) {
+				break;
+			}
+		}
+		System.out.println("종료");
+	}
+}
