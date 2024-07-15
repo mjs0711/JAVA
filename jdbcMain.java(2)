@@ -1,0 +1,61 @@
+package mjs_jdbc;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class jdbcMain {
+   public static void main(String[] args) throws Exception {
+	   
+	   Connection con = DBConnect.getConnection();
+	   PreparedStatement pstmt;
+	   
+	   Scanner sc = new Scanner(System.in);
+	   boolean 진행 = true;
+	   
+	   System.out.println("SW212 PC방에 오신걸 환영합니다.");
+	   
+	   while(true) {
+		   // 테이블 선택(사용자에게 입력 -> 해당 테이블을 선택)
+		   // 테이블이라는 변수에 테이블명을 저장
+		   // ResultSet -> 컬럼명, 행의 갯수 등등의 정보는 알수 없다.
+		   // ResultSetMataData
+		   
+		   //이번 예제에서는 테이블을 정해놓고 간다!
+		   String 테이블명 = "pc_use";
+		   
+		   System.out.printf("메뉴를 선택하세요.");
+		   System.out.printf("(1)Create (2)Read (3)Update (4)Delete (5)Exit > ");
+		   int 선택 = sc.nextInt();
+		   
+		   ResultSet rs;
+		switch(선택) { 
+		   case 1:	// (1)Create
+			   //MENU_NO는 기본키 -> 자동생성해주자
+			   String sql1 = "select MAX(menu_no) ? from ?";
+			   pstmt = con.prepareStatement(sql1);
+			   pstmt.setString(1,  테이블명);
+			   rs = pstmt.executeQuery(); 
+			   rs.next();
+			   
+			   System.out.println(rs.getString(1));
+			   
+			   String sql2 = "insert into ? values(?,?,?,?)";
+		   		
+		   		break;
+		   case 2:	// (2)Read
+		   		
+		   		break;
+		   case 3:
+		   		
+		   		break;
+		   case 4:
+		   
+		   		break;
+		   default:
+			   System.out.println("Bye~");
+			   진행 = false;
+		   }
+	   }
+      }
+   }
