@@ -1,0 +1,11 @@
+package s21212;
+
+public class primitiveConversion {
+	public static void main(String[] args) {
+		System.out.printf("여름: %s","우리들 ");
+		System.out.printf("학번: %d\n", 21200);
+		
+		System.out.printf("이름: %1$s, %2$d 전화번호: %3$s \n", "우리들", 21200, "010-1234-5678");
+		System.out.printf("이름: %1$s, 전화번호: %3$s 학번: %2$d", "우리들", 21200, "010-1234-5678");
+	}
+}
