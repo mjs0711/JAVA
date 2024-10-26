@@ -1,0 +1,27 @@
+package s21200;
+
+import java.util.Scanner;
+
+public class S21200_03v1 {
+	public static void main(String[] args) {
+		char grade = 0;
+		System.out.println("점수를 입력하세요>");
+		
+		Scanner sc = new Scanner(System.in);
+		int score = sc.nextInt();
+		
+		if (score >= 90) {
+			grade = 'A';
+		} else if (score >= 80) {
+			grade = 'B';
+		} else if (score >= 60) {
+			grade = 'C';
+		} else if(score >60) {
+			grade = 'D';
+		} else {
+			grade ='F';
+		}
+			
+		System.out.println("당신의 학점은 "+grade+"입니다");
+	}
+}
